@@ -1,0 +1,17 @@
+
+using UnityEngine;
+
+// I attached this code to the player prefab so 
+//that it would be present in every level.
+
+public class QuitIfEscapeIsPressed : MonoBehaviour {
+
+		
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Application.Quit();
+        }
+    }
+}
