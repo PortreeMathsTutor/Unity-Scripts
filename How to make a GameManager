@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//I attached this to the camera prefab which appear in every scene.
+//I attached this to the camera prefab which appears in every scene.
 
 
 public class GameManager : MonoBehaviour {
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
 	void Restart()
     {
-        Debug.Log("game manager restart level Scene ");
+        Debug.Log("game manager restart level");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
         
 
