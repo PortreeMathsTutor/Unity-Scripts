@@ -1,0 +1,12 @@
+
+using UnityEngine;
+// I put this on the panal where the quit button is.
+
+public class Credits : MonoBehaviour {
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Credits script Quit");
+    }
+}
