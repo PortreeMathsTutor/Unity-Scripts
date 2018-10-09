@@ -1,0 +1,25 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+//I attached this to the Score text in the canvas that I attached the DoNotDestroyUI script to.
+// There will be an other script with a variable called score and we are going to get it and use it 
+//in this script.
+
+public class Score : MonoBehaviour {
+
+    public float score; // in the other script the variable score will 
+                        // be defined          public static int score;
+                        // using the word static means the variable can be accessed else where.
+    
+
+  public Transform player;
+	public Text score;
+ 
+
+    // Update is called once per frame
+    void Update () {
+        score = NameOfOtherScript.score  // We need to acces the score value that is stored in a different script.
+        score.text = score.ToString("0") + " points";
+    
+    }
+}
