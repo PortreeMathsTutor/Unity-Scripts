@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+//I attached this to the player.
+public class ReachGoal : MonoBehaviour
+{    
+    void OnCollisionEnter(Collision other)
+    {
+
+             if (other.collider.transform.tag == "Goal1")
+             {
+              CompleteLevel();
+                
+            }
+            if (other.collider.transform.tag == "LastGoal")
+            {
+                CompleteLastLevel();
+                
+              
+            }
+        
+    }
+
+    void CompleteLevel()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("ReachGoal script change to next scene");
+
+    }
+    void CompleteLastLevel()
+
+    {
+        
+        SceneManager.LoadScene(0);
+        Debug.Log("ReachGoal script change to scene 0");
+    }
+}
