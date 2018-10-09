@@ -1,0 +1,24 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+//I attached this to the camera prefab which appear in every scene.
+
+
+public class GameManager : MonoBehaviour {
+        
+    public void RestartThisLevel()  //this function can now be used in other scripts
+                                    // for instance we could write      FindObjectOfType<GameManager>().RestartThisLevel();
+                                    //in an other script.
+    {
+        Debug.Log("game manager script change to Scene 0");
+			Restart();
+	}
+
+	void Restart()
+    {
+        Debug.Log("game manager restart level Scene ");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex );
+        
+
+    }
+
+}
