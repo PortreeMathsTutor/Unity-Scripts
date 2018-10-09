@@ -1,0 +1,23 @@
+using UnityEngine;
+
+//I attached this to the canvas.
+
+public class DoNotDestroyUI : MonoBehaviour
+{
+    static DoNotDestroyUI instance;
+
+    public static DoNotDestroyUI GetInstance()
+    {
+        return instance;
+    }
+       void Start()
+   {        if (instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;    
+        GameObject.DontDestroyOnLoad(this.gameObject);  
+
+    }
+}
