@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-//I attached this to the camera prefab which appears in every scene.
+// I attached this to the camera prefab which appears in every scene.
 
 
 public class GameManager : MonoBehaviour {
