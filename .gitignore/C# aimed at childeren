@@ -1,4 +1,5 @@
 Hi, I put together a few Unity C# scripts for students (or anyone) to use.
+
 I have done my best to keep it simple.
 Unity is easy enough for primary school childeren
 to get the hang of if there is an adult sitting next to them
@@ -6,6 +7,7 @@ showing them what to do.
 If a child loves creating games they will learn about sine waves, forces, vectors
 rotations and a whole lot more without anyone having to make them do it.
 The only danger is that they will enjoy it so much they won't want to do anything else.
+
 The date is 10/10/2018
 Unfortunately C# for Unity is always being updated.
 So scripts that you copy from the internet may not work if 
