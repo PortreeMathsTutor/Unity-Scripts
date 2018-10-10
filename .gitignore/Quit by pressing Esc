@@ -1,17 +1,7 @@
+Hi, I put together a few Unity C# scripts for students (or anyone) to use.
+I have done my best to keep it simple.
+The date is 10/10/2018
+Unfortunately C# for Unity is always being updated.
+So scripts that you copy from the internet may not work if 
+too much time has passed since they were written.
 
-using UnityEngine;
-
-// I attached this code to the player prefab so 
-//that it would be present in every level.
-
-public class QuitIfEscapeIsPressed : MonoBehaviour {
-
-		
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
-        {
-            Application.Quit();
-        }
-    }
-}
