@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 //I attached this to the player.
 public class PlayerCollision : MonoBehaviour {
 
-	public PlayerMovement movement;     // A reference to our PlayerMovement script
+	
 
 	// This function runs when we hit another object.
 	// We get information about the collision and call it "collisionInfo".
