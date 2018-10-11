@@ -1,0 +1,21 @@
+using UnityEngine;
+using UnityEngine.Audio;
+
+//I put this on the player.
+
+public class PlayAudioGold : MonoBehaviour
+{ 
+public AudioClip zing;
+
+void OnCollisionEnter(Collision collisionInfo)
+{
+    
+    if (collisionInfo.collider.tag == "Coin")
+    {
+
+        AudioSource.PlayClipAtPoint(zing, transform.position);
+
+    }
+}
+}
+
