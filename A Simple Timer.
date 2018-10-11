@@ -1,0 +1,18 @@
+
+using UnityEngine;
+
+// I attached this to the time text
+
+public class SimpleTimer : MonoBehaviour
+{
+     public static float timeTimer = 60f;
+ 
+     void Update()
+    {if (timeTimer > 0)
+        {
+            timeTimer -= Time.time;
+        
+        }
+      
+    }
+}
