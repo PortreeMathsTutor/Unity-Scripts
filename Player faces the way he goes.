@@ -1,0 +1,48 @@
+using UnityEngine;
+
+//I attached this to the player.
+
+public class PlayerMovement : MonoBehaviour
+{
+
+    // This is a reference to the Rigidbody component called "rb"
+    public Rigidbody rb;
+    Vector3 movementright = new Vector3(1, 0, 0);
+    Vector3 movementleft = new Vector3(-1, 0, 0);
+    Vector3 movementup = new Vector3(0, 0, 1);
+    Vector3 movementdown = new Vector3(0, 0, -1);
+
+
+    public float forwardForce = 2000f;  // Variable that determines the forward force
+    public float sidewaysForce = 500f;  // Variable that determines the sideways force
+
+    // We marked this as "Fixed"Update because we
+    // are using it to mess with physics.
+    void FixedUpdate()
+    {
+        if (Input.GetKey("down"))
+        {
+            rb.AddForce(0, 0, -forwardForce * Time.deltaTime, ForceMode.VelocityChange);
+            transform.rotation = Quaternion.LookRotation(movementdown);
+
+        }
+
+        if (Input.GetKey("up"))
+        {
+            rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
+            transform.rotation = Quaternion.LookRotation(movementup);
+        }
+
+        if (Input.GetKey("right"))
+        {
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            transform.rotation = Quaternion.LookRotation(movementright);
+        }
+
+        if (Input.GetKey("left"))
+        {
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            transform.rotation = Quaternion.LookRotation(movementleft);
+        }
+    }
+}
