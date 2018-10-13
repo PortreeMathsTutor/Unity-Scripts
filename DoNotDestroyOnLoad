@@ -1,0 +1,11 @@
+using UnityEngine;
+
+//I attached this to the canvas.
+public class DoNotDestroyUI : MonoBehaviour
+{
+    // Use this for initialization
+    void Start()
+    {
+             GameObject.DontDestroyOnLoad(gameObject);  
+    }
+}
