@@ -1,0 +1,19 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+//I attached this to the player.
+public class FallOff : MonoBehaviour
+{
+    public Rigidbody rb;
+
+    void FixedUpdate()
+    {
+       
+
+        if (rb.position.y < -1f)
+        {
+             SceneManager.LoadScene(0);
+           
+        }
+ 
+}
