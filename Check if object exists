@@ -1,0 +1,4 @@
+    if (GameObject.Find("WhateverItsCalled") != null)
+    {
+        //it exists
+    }
