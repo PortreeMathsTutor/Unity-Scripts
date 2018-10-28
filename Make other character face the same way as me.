@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class Example : MonoBehaviour
+{
+    // The object whose rotation we want to match.
+    Transform Regular_Character;
+
+    // Angular speed in degrees per sec.
+    public float rotationSpeed = 1f;
+    void Update()
+    {
+        // The step size is equal to speed times frame time.
+        var step = rotationSpeed * Time.deltaTime;
+
+        // Rotate our transform a step closer to the target's.
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Regular_Character.rotation, step);
+    }
+}
