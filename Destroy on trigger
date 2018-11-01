@@ -12,5 +12,8 @@ public class DestroyOnTrigger : MonoBehaviour
         if(other.gameObject.tag == "Player")
             Instantiate(effect, objToDestroy.transform.position, objToDestroy.transform.rotation);
             Destroy(objToDestroy);
+            //use
+            // Destroy(gameObject);
+            //if it is the boject you put the script on that you want to destroy.
     }
 }
