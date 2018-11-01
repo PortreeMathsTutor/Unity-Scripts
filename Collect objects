@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectsToCollect : MonoBehaviour {
+
+public class CollectStuff : MonoBehaviour {
+
     public static int objects = 0;
-	// Use this for initialization
-	void Awake () {
-        objects++;
-	}
-	
-	// Update is called once per frame
-    void OnTriggerEnter(Collider plyr)
+
+    // Use this for initialization
+
+
+    // Update is called once per frame
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        if (plyr.gameObject.tag == "Player")
-            objects--;
-        gameObject.SetActive(false);
+        if (collisionInfo.collider.tag == "Player")
+        {
+            objects = objects + 1;
+            Debug.Log(objects);
+            Destroy(gameObject);
+        }
     }
 }
