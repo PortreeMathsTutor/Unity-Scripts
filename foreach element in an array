@@ -1,0 +1,19 @@
+using UnityEngine;
+
+public class ForEachElementInTheArray : MonoBehaviour {
+    // You have to specify the size and values of the array in the inspector.
+    public int[] arr;
+
+    // Use this for initialization
+    void Start() {
+        foreach (int i in arr)
+        {
+            Debug.Log(i);
+        }
+    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
