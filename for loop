@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WhileLoopTest : MonoBehaviour {
+public class ForLoopTest : MonoBehaviour {
     private int i ;
 
 	// Use this for initialization
