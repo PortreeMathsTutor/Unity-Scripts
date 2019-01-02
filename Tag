@@ -1,0 +1,17 @@
+using UnityEngine;
+
+public class AddTagToThisGameObject : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        if (this.gameObject.tag == "Player")
+        {
+            Debug.Log("This object is the player");
+        }
+    }
+	
+	// Update is called once per frame
+	void Update () {
+      
+    }
+}
