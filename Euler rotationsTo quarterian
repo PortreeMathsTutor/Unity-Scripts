@@ -1,0 +1,22 @@
+using UnityEngine;
+
+public class EulerToQuarterian : MonoBehaviour {
+    
+
+    // Use this for initialization
+    void Start() {
+
+       
+            // A rotation 30 degrees around the y-axis
+            Vector3 rotationVector = new Vector3(60, 30,40);
+            Quaternion rot1 = Quaternion.AngleAxis(60, rotationVector);
+
+        transform.localRotation = rot1;    // rotates around the rotationVector.
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+     
+    }
+}
