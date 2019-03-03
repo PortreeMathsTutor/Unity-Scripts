@@ -1,0 +1,9 @@
+ y = SceneManager.GetActiveScene().buildIndex;
+
+
+        if (y==1)
+        {
+            Instructions.text = "";
+            Debug.Log("1");
+            Debug.Log("index scene 1");
+        }
