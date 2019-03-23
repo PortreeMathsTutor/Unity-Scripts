@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+// I attached this to the score button in the menu page 
+//so that it wouldn't be in the way in other scenes.
+public class MoveToMiddleTop : MonoBehaviour
+{
+    public GameObject score;
+    public Vector3 positionMid;
+    // Start is called before the first frame update
+  
+
+    // Update is called once per frame
+    void Update()
+    {
+        Scene sceneLoaded = SceneManager.GetActiveScene();
+        if (sceneLoaded.buildIndex == 4)
+        {
+            // Move the object forward along its z axis 1 unit/second.
+            score.transform.SetPositionAndRotation(positionMid, Quaternion.Euler(0, 0, 0));
+        }
+    }
+}
