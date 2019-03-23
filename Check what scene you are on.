@@ -15,6 +15,17 @@ public class MoveToMiddleTop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
+    
+    //This also works
+    // y = SceneManager.GetActiveScene().buildIndex;
+    //       if (y != 0)
+    //        {
+    //        Do something
+    //      }
+      
+      
+      
         Scene sceneLoaded = SceneManager.GetActiveScene();
         if (sceneLoaded.buildIndex == 4)
         {
