@@ -21,7 +21,7 @@ public class MoveTheBall : MonoBehaviour
 
         if (Input.GetKey("right"))
         {
-            rb.AddForce(5, 0, 0)
+            rb.AddForce(5, 0, 0);
         }
 
         if (Input.GetKey("left"))
