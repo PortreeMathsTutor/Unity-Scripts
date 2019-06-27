@@ -1,4 +1,4 @@
-
+using UnityEngine.UI;
 using UnityEngine;
 
 // I attached this to the time text
