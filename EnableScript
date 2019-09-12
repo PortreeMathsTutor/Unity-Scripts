@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CatchTheDino : MonoBehaviour
+{
+    public GameObject dino;
+
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        // We check if the object we collided with has a tag called "Enemy".
+        if (collisionInfo.collider.tag == "Player")
+        {
+          GetComponent<FullyTrainedDinoMovement>().enabled = true;
+        }
+     }
+           
+}
