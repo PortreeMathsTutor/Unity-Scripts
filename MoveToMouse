@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
-{
+{public float speed= 0.001f;
    void Update()
     {
                    transform.forward = cam.transform.forward;
