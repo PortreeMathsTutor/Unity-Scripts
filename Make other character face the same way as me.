@@ -3,7 +3,7 @@ using UnityEngine;
 public class Example : MonoBehaviour
 {
     // The object whose rotation we want to match.
-    Transform Regular_Character;
+   public Transform Regular_Character;
 
     // Angular speed in degrees per sec.
     public float rotationSpeed = 1f;
