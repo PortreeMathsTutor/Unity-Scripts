@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ChangeTheColor : MonoBehaviour
+{
+    public Renderer m_Renderer;
+
+    void Start()
+    {
+        //Fetch the Renderer component of the GameObject
+        m_Renderer = GetComponent<Renderer>();
+    }
+
+    //Run your mouse over the GameObject to change the Renderer's material color to red
+   void Update()
+    {
+        m_Renderer.material.color = Color.red;
+    }
+
+
+    //Change the Material's Color back to white when the mouse exits the GameObject
+    void OnMouseDown()
+    {
+        m_Renderer.material.color = Color.green;
+    }
+}
