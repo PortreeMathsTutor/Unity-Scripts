@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
+public class UIcontroller : MonoBehaviour
+{
+    public  int counter;
+
+    public static float score;
+
+    // I put this on the empty in the scor level at the start.
+
+    // Update is called once per frame
+    public void ChangeToScene (int sceneTochangeTo)
+    {if (score < 1)
+        {
+            SceneManager.LoadScene(sceneTochangeTo);
+        }
+        else { SceneManager.LoadScene(2); }
+    }
+
+    public void SkipScores()
+    { if (score>1)
+        { SceneManager.LoadScene(2); }
+    }
+    public void StartAgain()
+    {
+        score = 0f;
+        SceneManager.LoadScene(0);
+    }
+    public void AccessGames()
+    {
+        counter = AddToCounterOnFinish.counter;
+        SceneManager.LoadScene(counter+13);
+    }
+
+}
