@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveBall : MonoBehaviour
+{
+    Rigidbody rig;
+    float moveSpeed = 10f;
+    bool useTorque = true;
+
+    void Start()
+    {
+        rig = GetComponent<Rigidbody>();
+    }
+    public void Control()
+    {
+        if (useTorque)
+        {
+            rig.AddTorque(new Vector3(-Input.GetAxisRaw("Vertical"), 0f, Input.GetAxisRaw("Horizontal")) * moveSpeed);
+        }
+    }
+    void FixedUpdate()
+    {
+        Control();
+    }
+} 
