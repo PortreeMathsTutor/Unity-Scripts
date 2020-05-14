@@ -5,14 +5,14 @@ public class WhileLoopTest : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        while (i<6) {
-            Debug.Log("the value of i is " + i);
-            i++;
-        }
+      
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		  while (i<6) {
+            Debug.Log("the value of i is " + i);
+            i++;
+        }
 	}
 }
