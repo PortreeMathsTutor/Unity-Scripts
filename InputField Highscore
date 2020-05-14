@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class HighscoreTable : MonoBehaviour
+{
+   private float tablestringPos;
+   private float tableStringScore;
+  private string tableStringName;
+    public Text tableTextPos;
+    public Text tableTextScore;
+    public Text tableTextName;
+    public GameObject inputTextPos;
+    public GameObject inputTextScore;
+    public GameObject inputTextName;
+    public Text inputPlaceHolderPos;
+    public Text inputPlaceHolderScore;
+    public Text inputPlaceHolderName;
+    public void InputThePos()
+    {
+        tablestringPos = float.Parse(inputTextPos.GetComponent<Text>().text);
+        tableTextPos.text = tablestringPos.ToString();
+        inputPlaceHolderPos.text = tablestringPos.ToString();
+    }
+    public void InputTheScore()
+    {
+        tableStringScore = float.Parse(inputTextScore.GetComponent<Text>().text);
+        tableTextScore.text =tableStringScore.ToString();
+        inputPlaceHolderScore.text = tableStringScore.ToString();
+    }
+
+    public void InputTheName()
+    {
+        tableStringName = inputTextName.GetComponent<Text>().text;
+        inputPlaceHolderName.text = tableStringName;
+        tableTextName.text = tableStringName;
+    }
+
+}
