@@ -13,6 +13,7 @@ public class HighscoreTable : MonoBehaviour
     public GameObject inputTextPos;
     public GameObject inputTextScore;
     public GameObject inputTextName;
+    public Text textNameInInputField;
     public Text inputPlaceHolderPos;
     public Text inputPlaceHolderScore;
     public Text inputPlaceHolderName;
@@ -35,5 +36,10 @@ public class HighscoreTable : MonoBehaviour
         inputPlaceHolderName.text = tableStringName;
         tableTextName.text = tableStringName;
     }
-
+    public void InputTheName2()
+    {
+        tableStringName = textNameInInputField.text;
+        inputPlaceHolderName.text = tableStringName;
+        tableTextName.text = tableStringName;
+    }
 }
