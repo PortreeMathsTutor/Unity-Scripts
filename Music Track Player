@@ -1,0 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MusicTrackPlayer : MonoBehaviour
+{
+    int i;
+    AudioSource MpPlayer;
+    public AudioClip[] audioClipeArray;
+    // Use this for initialization
+    void Start()
+    {
+        i = 0;
+        MpPlayer = GetComponent<AudioSource>();
+        MpPlayer.clip = audioClipeArray[0];
+        MpPlayer.loop = false;
+        MpPlayer.Play();
+        StartCoroutine(WaitForTrackTOend());
+    }
+
+    private void Update()
+    {
+   if(i< audioClipeArray.Length)
+        {
+        StartCoroutine(WaitForTrackTOend());
+
+         }
+    }
+
+    IEnumerator WaitForTrackTOend()
+    {
+        while (MpPlayer.isPlaying)
+        {
+
+            yield return new WaitForSeconds(0.01f);
+
+        }
+        i = i + 1;
+        if (i ==audioClipeArray.Length) { i = 0; }
+        MpPlayer.clip = audioClipeArray[i];
+        MpPlayer.Play();
+
+    }
+}
