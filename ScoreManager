@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+[CreateAssetMenu(menuName ="ScoreManager")]
+public class ScoreManager : ScriptableObject
+{
+    public int highscore;
+    public int score;
+    public int livesLeft;
+
+    // Start is called before the first frame update
+
+    public void SetLivesTo5()
+    {
+        livesLeft = 5;
+ 
+    }
+    public void SetScoreToZero()
+    {
+
+        score = 0;
+    }
+    public void LoosAlife(int amount)
+    {
+        livesLeft = livesLeft - 1;
+    }
+    public void AddScore(int amount)
+    {
+        score += amount;
+    }
+}
