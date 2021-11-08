@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class KillPlayer : MonoBehaviour
+{
+    [SerializeField]
+    private ScoreManager scoreManager;
+
+    public bool youAreDead;
+    public int livesLeft;
+    // Start is called before the first frame update
+    void Start()
+    {
+        livesLeft = 5;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            scoreManager.LoosAlife(1);
+        }
+    }
+        // Update is called once per frame
+        void Update()
+        {
+        if (scoreManager.livesLeft < 1)
+            {
+         
+                youAreDead = true;
+            }
+            if (youAreDead)
+            {
+           scoreManager.SetLivesTo5();
+     
+                SceneManager.LoadScene(2);
+            }
+        }
+    
+}
