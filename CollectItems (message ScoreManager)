@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CollectItem : MonoBehaviour
+{
+    [SerializeField]
+    private ScoreManager scoreManager;
+    public int score;
+    public GameObject player;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "PlayersHelper")
+        {
+            AddScore();
+            transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 30f);
+        }
+        if (other.tag == "Player")
+        {
+            AddScore();
+            transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z -30f);
+        }
+    }
+
+    private void AddScore()
+    {
+        scoreManager.AddScore(1);
+        score = scoreManager.score;
+    }
+}
