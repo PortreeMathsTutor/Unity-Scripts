@@ -4,7 +4,13 @@ using UnityEngine.SceneManagement;
 //I attached this to the player.
 public class FallOff : MonoBehaviour
 {
-    public Rigidbody rb;
+    private Rigidbody rb;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void FixedUpdate()
     {
