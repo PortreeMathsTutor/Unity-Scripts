@@ -1,0 +1,27 @@
+     using System.Collections;
+     using System.Collections.Generic;
+     using UnityEngine;
+     using UnityEngine.SceneManagement;
+     
+     public class CountSceneChanges : MonoBehaviour
+     {
+      public static int numb;
+     
+         void Start()
+         {
+         numb =0;
+             my_Scene = SceneManager.GetActiveScene();
+          first_Scene = SceneManager.GetActiveScene();
+         }
+     
+         // Update is called once per frame
+         void Update()
+         {
+             my_Scene = SceneManager.GetActiveScene();
+             if (my_Scene.buildIndex != first_Scene.buildIndex)
+             {
+             numb=numb+1;
+             }
+             first_Scene = SceneManager.GetActiveScene();
+         }
+     }
