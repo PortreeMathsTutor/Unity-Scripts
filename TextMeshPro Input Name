@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class TexMeshProDisplayText : MonoBehaviour
+{
+    public TextMeshProUGUI obj_text;
+    public TMP_InputField display;
+
+
+
+
+    public void Create()
+    {
+        PlayerPrefs.SetString("Top_1_name", obj_text.text);
+        PlayerPrefs.Save();
+        obj_text.text = display.text;
+    }
+}
