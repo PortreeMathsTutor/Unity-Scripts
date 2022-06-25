@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class ChangeText : MonoBehaviour
+{
+    public GameObject Objective1Text;
+    public TextMeshProUGUI objective1Star;
+    private void Start()
+    {
+      
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Objective1Text.GetComponent<TextMeshPro>().text = "";
+            objective1Star.text = "";
+        }
+    }
+}
