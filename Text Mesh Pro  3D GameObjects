@@ -25,28 +25,33 @@ public class YouMightWantSlogansToChange : MonoBehaviour
         lives = BulletScript.playerHealth;
         score = Health.score;
         dist = Vector3.Distance(player.transform.position, transform.position);
-        if (timerInt % 500 == 0)
+        if (dist<60)
         {
-            Objective1Text.GetComponent<TextMeshPro>();
-            objective1Star.text = "";
+            if (timerInt % 500 == 0)
+            {
+                Objective1Text.GetComponent<TextMeshPro>();
+                objective1Star.text = "";
+            }
+            if ((score > 30) & (score < 35))
+            {
+                timerInt = 1;
+                Objective1Text.GetComponent<TextMeshPro>();
+                objective1Star.text = "Perfectly Executed!";
+            }
+            if ((score > 80) & (score < 85))
+            {
+                timerInt = 1;
+                Objective1Text.GetComponent<TextMeshPro>();
+                objective1Star.text = "A Dying Art";
+            }
+            if (lives == 4)
+            {
+                timerInt = 1;
+                Objective1Text.GetComponent<TextMeshPro>();
+                objective1Star.text = "Whoops!";
+            }
         }
-        if ((score > 30) & (score < 35))
-        {
-            timerInt = 1;
-            Objective1Text.GetComponent<TextMeshPro>();
-            objective1Star.text = "Perfectly Executed!";
-        }
-        if ((score > 80) & (score < 85))
-        {
-            timerInt = 1;
-            Objective1Text.GetComponent<TextMeshPro>();
-            objective1Star.text = "A Dying Art";
-        }
-        if (lives==4)
-        {
-            timerInt = 1;
-            Objective1Text.GetComponent<TextMeshPro>();
-            objective1Star.text = "Whoops!";
-        }
+      
     }
 }
+
